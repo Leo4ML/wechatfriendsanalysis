@@ -10,7 +10,7 @@ import json
 import requests
 import codecs
 
-sex_dict = {'0':'其他', '1':'男', '2':'女'}
+sex_dict = {'0':'这些人都不写性别的', '1':'帅气的小伙子们', '2':'漂亮的小姐姐们'}
 
 #下载微信好友头像图片
 def download_images(friend_list):
@@ -63,7 +63,7 @@ if __name__ == '__main__':
         friends_list.append(item)
     save_data(friends_list)
     download_images(friends_list)
-    user = itchat.search_friends(name=u'司马缸砸光')
+    user = itchat.search_friends(name=u'ATM')
 
 #这是我自己的微信小号，用来测试信息发送功能，日后也许会做成一个自动聊天机器人
     itchat.send(u'运行完成啦~~!', user[0]['UserName'])
