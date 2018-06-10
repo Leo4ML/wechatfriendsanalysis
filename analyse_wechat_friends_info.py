@@ -166,10 +166,10 @@ if __name__=='__main__':
     get_provincemap('福建省地区分布统计', name_list, num_list)
            
     num_list = [5 for i in range(len(NickName_list))]
-    word_cloud(u'微信好友昵称', NickName_list, num_list, [18,18])
+    word_cloud('微信好友昵称', NickName_list, num_list, [18,18])
     
     name_list, num_list = counter2list(Signature_counter.most_common(200))
-    word_cloud(u'微信好友签名关键词', name_list, num_list, [20,100])
+    word_cloud('微信好友签名关键词', name_list, num_list, [20,100])
     
     mergeImage()
 
