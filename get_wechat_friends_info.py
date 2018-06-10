@@ -64,7 +64,7 @@ if __name__ == '__main__':
         friends_list.append(item)
     save_data(friends_list)
     download_images(friends_list)
-    user = itchat.search_friends(name=u'ATM')
+    user = itchat.search_friends(name=u'司马缸砸光')
 
 #这是我自己的微信小号，用来测试信息发送功能，日后也许会做成一个自动聊天机器人
     itchat.send(u'运行完成啦~~!', user[0]['UserName'])
