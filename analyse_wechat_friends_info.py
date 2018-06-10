@@ -57,7 +57,7 @@ def get_provincemap(item_name, item_name_list, item_num_list):
 
 def word_cloud(item_name, item_name_list, item_num_list, word_size_range):
     wordcloud = WordCloud(width=1200, height = 1000)
-    wordcloud.add('', item_name_list, item_num_list,word_size_range=word_size_range,shape='circle')
+    wordcloud.add(item_name, item_name_list, item_num_list,word_size_range=word_size_range,shape='circle')
     out_file_name = './analyse/'+item_name+'.html'
     wordcloud.render(out_file_name)
 
@@ -160,16 +160,16 @@ if __name__=='__main__':
     
     name_list, num_list = counter2list(Province_counter.most_common(15))
     get_bar('地区统计', name_list, num_list)
-    
+    get_map('好友地区可视化', name_list, num_list)
+        
     name_list, num_list = dict2list(City_counter)
     get_provincemap('福建省地区分布统计', name_list, num_list)
-    get_map('好友地区可视化', name_list, num_list)
-    
+           
     num_list = [5 for i in range(len(NickName_list))]
-    word_cloud('微信好友昵称', NickName_list, num_list, [18,18])
+    word_cloud(u'微信好友昵称', NickName_list, num_list, [18,18])
     
     name_list, num_list = counter2list(Signature_counter.most_common(200))
-    word_cloud('微信好友签名关键词', name_list, num_list, [20,100])
+    word_cloud(u'微信好友签名关键词', name_list, num_list, [20,100])
     
     mergeImage()
 
