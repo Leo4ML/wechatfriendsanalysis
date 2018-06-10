@@ -14,6 +14,9 @@
 好友地图分布可视化
 ![image](https://github.com/Leo4ML/wechatfriendsanalysis/blob/master/analyse/%E5%A5%BD%E5%8F%8B%E5%9C%B0%E5%8C%BA%E5%8F%AF%E8%A7%86%E5%8C%96.png?raw=true)
 
+福建省好友地区分布图
+![image](https://github.com/Leo4ML/wechatfriendsanalysis/blob/master/analyse/%E7%A6%8F%E5%BB%BA%E7%9C%81%E5%9C%B0%E5%8C%BA%E5%88%86%E5%B8%83%E7%BB%9F%E8%AE%A1.png?raw=true)
+
 微信好友昵称词云
 ![image](https://github.com/Leo4ML/wechatfriendsanalysis/blob/master/analyse/%E5%BE%AE%E4%BF%A1%E5%A5%BD%E5%8F%8B%E6%98%B5%E7%A7%B0.png?raw=true)
 
