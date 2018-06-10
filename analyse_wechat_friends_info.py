@@ -96,6 +96,7 @@ def counter2list(_counter):
 
 def get_tag(text, cnt):
     print ('正在分析句子......',   text)
+    jieba.analyse.set_stop_words('chineseStopWords.txt')
     tag_list = jieba.analyse.extract_tags(text)
     for tag in tag_list:
         cnt[tag] += 1
