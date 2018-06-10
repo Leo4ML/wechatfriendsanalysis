@@ -32,7 +32,7 @@ pps：所有涉及的文件夹需要实现建立好，否则报错。
 
 
 微信好友个签关键词词云
-![image](https://github.com/Leo4ML/wechatfriendsanalysis/blob/master/analyse/%E5%BE%AE%E4%BF%A1%E5%A5%BD%E5%8F%8B%E7%AD%BE%E5%90%8D%E5%85%B3%E9%94%AE%E8%AF%8D.png?raw=true)
+![image](https://github.com/Leo4ML/wechatfriendsanalysis/blob/master/analyse/%E5%BE%AE%E4%BF%A1%E5%A5%BD%E5%8F%8B%E7%AD%BE%E5%90%8D%E5%85%B3%E9%94%AE%E8%AF%8D%EF%BC%88%E5%A2%9E%E5%8A%A0%E5%81%9C%E7%94%A8%E8%AF%8D%EF%BC%89.png?raw=true)
 
 
 微信好友性别统计
