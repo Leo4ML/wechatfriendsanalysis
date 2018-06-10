@@ -60,6 +60,7 @@ if __name__ == '__main__':
         item['Province'] = friend['Province']
         item['Signature'] = friend['Signature']
         item['UserName'] = friend['UserName']
+        item['City'] = friend['City']+'市'
         friends_list.append(item)
     save_data(friends_list)
     download_images(friends_list)

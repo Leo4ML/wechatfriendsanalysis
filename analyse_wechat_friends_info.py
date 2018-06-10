@@ -48,6 +48,12 @@ def get_map(item_name, item_name_list, item_num_list):
     out_file_name = './analyse/'+item_name+'.html'
     _map.render(out_file_name)
 
+def get_provincemap(item_name, item_name_list, item_num_list):
+    subtitle = 'Leo的好友地区分布地图'
+    _map = Map(item_name, width=1300,height=800, title_pos='center', title_text_size=30,subtitle = subtitle, subtitle_text_size=25)
+    _map.add('', item_name_list, item_num_list, is_label_show=True,maptype = '福建', is_visualmap=True, visual_text_color='#000')
+    out_file_name = './analyse/'+item_name+'.html'
+    _map.render(out_file_name)
 
 def word_cloud(item_name, item_name_list, item_num_list, word_size_range):
     wordcloud = WordCloud(width=1200, height = 1000)
@@ -136,6 +142,7 @@ if __name__=='__main__':
         friends = json.load(f)
     sex_counter = Counter()
     Province_counter = Counter()
+    City_counter = Counter()
     NickName_list = []
     Signature_counter = Counter()
     
@@ -143,6 +150,8 @@ if __name__=='__main__':
         sex_counter[friend['Sex']]+=1
         if friend['Province'] != '':
             Province_counter[friend['Province']]+=1
+        if friend['City'] != '市' and friend['Province']=='福建':
+            City_counter[friend['City']]+=1
         NickName_list.append(friend['NickName'])
         get_tag(friend['Signature'],Signature_counter)
     
@@ -152,9 +161,11 @@ if __name__=='__main__':
     name_list, num_list = counter2list(Province_counter.most_common(15))
     get_bar('地区统计', name_list, num_list)
     
+    name_list, num_list = dict2list(City_counter)
+    get_provincemap('福建省地区分布统计', name_list, num_list)
     get_map('好友地区可视化', name_list, num_list)
     
-    num_list = [5 for i in range(1,len(NickName_list)+1)]
+    num_list = [5 for i in range(len(NickName_list))]
     word_cloud('微信好友昵称', NickName_list, num_list, [18,18])
     
     name_list, num_list = counter2list(Signature_counter.most_common(200))
